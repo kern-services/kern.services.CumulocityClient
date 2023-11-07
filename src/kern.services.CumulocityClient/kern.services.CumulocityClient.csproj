@@ -14,10 +14,12 @@
     <RootNamespace>kern.services.CumulocityClient</RootNamespace>
     <Version>10.15.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\kern.services.CumulocityClient.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/kern-services/kern.services.CumulocityClient</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <Nullable>annotations</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +30,9 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\"></None>
+  </ItemGroup>
   <ItemGroup>
     <None Remove="System.Web" />
   </ItemGroup>

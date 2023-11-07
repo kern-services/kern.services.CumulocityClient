@@ -1,4 +1,4 @@
-# kern.services.CumulocityClient - the C# library for the Cumulocity IoT
+# kern.services.CumulocityClient - C# library for the Cumulocity IoT
 
 This library was generated using the [OpenAPI generator](https://openapi-generator.tech) project.
 
