@@ -105,7 +105,7 @@ namespace kern.services.CumulocityClient.Test.Api
         public void PostBinariesCollectionResourceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //BinaryInfo _object = null;
+            //Binary _object = null;
             //System.IO.Stream file = null;
             //var response = instance.PostBinariesCollectionResource(_object, file);
             //Assert.IsType<byte[]>(response);
