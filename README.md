@@ -1,5 +1,21 @@
 # kern.services.CumulocityClient - the C# library for the Cumulocity IoT
 
+This library was generated using the [OpenAPI generator](https://openapi-generator.tech) project.
+
+The command to generate this library can be found in the file `openapi/generate.sh`:
+
+```shell
+docker run --rm \
+    -v $PARENT_DIR:/local openapitools/openapi-generator-cli generate \
+    -i /local/openapi/c8y-oas-10.15.0.json \
+    -g csharp-netcore \
+    --additional-properties=netCoreProjectFile=true,packageName=kern.services.CumulocityClient,packageVersion=10.15.0,targetFramework=net7.0 \
+    -o /local/
+```
+
+The "csharp-netcore" generator does not seem to be documented on the website of the OpenAPI generator project, but it works fine and generates
+a dotnet core compatible project while the default "csharp" generator generates a dotnet framework project.
+
 # REST implementation
 
 This section describes the aspects common to all REST-based interfaces of Cumulocity IoT. The interfaces are based on the [Hypertext Transfer Protocol 1.1](https://tools.ietf.org/html/rfc2616) using [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure).
