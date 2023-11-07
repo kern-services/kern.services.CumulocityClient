@@ -16,6 +16,14 @@ docker run --rm \
 The "csharp-netcore" generator does not seem to be documented on the website of the OpenAPI generator project, but it works fine and generates
 a dotnet core compatible project while the default "csharp" generator generates a dotnet framework project.
 
+# Cumulocity IoT REST API
+
+The source of the generated API can be found here:
+https://cumulocity.com/api/core/10.15.0/
+
+The version of the API is 10.15.0, which is not the latest version of the API, but it is the version currently deployed on the Instance
+that we are using. Feel free to create newer versions and provide a pull request.
+
 # REST implementation
 
 This section describes the aspects common to all REST-based interfaces of Cumulocity IoT. The interfaces are based on the [Hypertext Transfer Protocol 1.1](https://tools.ietf.org/html/rfc2616) using [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure).
