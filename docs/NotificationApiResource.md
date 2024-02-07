@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.NotificationApiResource
 
 ## Properties
@@ -10,5 +11,7 @@ Name | Type | Description | Notes
 **NotificationSubscriptionsBySourceAndContext** | **string** | Read-only collection of all notification subscriptions of a particular context and a specific source object. | [optional] 
 **NotificationSubscriptionsByContext** | **string** | Read-only collection of all notification subscriptions of a particular context. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

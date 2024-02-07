@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.ApplicationManifest
 
 ## Properties
@@ -25,5 +26,7 @@ Name | Type | Description | Notes
 **NoAppSwitcher** | **bool** | A flag that decides if the application is shown in the app switcher on the UI. | [optional] 
 **TabsHorizontal** | **bool** | A flag that decides if the application tabs are displayed horizontally or not. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

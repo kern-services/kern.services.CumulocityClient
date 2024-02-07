@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.RealtimeNotification
 
 ## Properties
@@ -18,5 +19,7 @@ Name | Type | Description | Notes
 **SupportedConnectionTypes** | **List&lt;string&gt;** | Connection types supported by both client and server, that is, intersection between client and server options. | [optional] 
 **_Version** | **string** | [Bayeux protocol](https://docs.cometd.org/current/reference/#_concepts_bayeux_protocol) version used by the client (in a request) or server (in a response).  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.BulkNewDeviceRequest
 
 ## Properties
@@ -11,5 +12,7 @@ Name | Type | Description | Notes
 **CredentialUpdatedList** | [**List&lt;BulkNewDeviceRequestCredentialUpdatedListInner&gt;**](BulkNewDeviceRequestCredentialUpdatedListInner.md) | An array with the updated device credentials. | [optional] 
 **FailedCreationList** | [**List&lt;BulkNewDeviceRequestFailedCreationListInner&gt;**](BulkNewDeviceRequestFailedCreationListInner.md) | An array with details of the failed device credentials. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.C8yNetworkC8yWAN
-Mobile internet connectivity interface status.
 
 ## Properties
 
@@ -11,5 +11,7 @@ Name | Type | Description | Notes
 **Apn** | **string** | APN used for internet access. | [optional] 
 **Username** | **string** | SIM connectivity username. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

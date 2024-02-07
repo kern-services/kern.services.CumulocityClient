@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.DeviceControlApiResource
 
 ## Properties
@@ -12,5 +13,7 @@ Name | Type | Description | Notes
 **OperationsByDeviceIdAndStatus** | **string** | Read-only collection of all operations with a particular status, that should be executed on a particular device. | [optional] 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

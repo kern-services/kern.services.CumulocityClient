@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.UserCollection
 
 ## Properties
@@ -10,5 +11,7 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **Users** | [**List&lt;User&gt;**](User.md) | An array of users. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.MeasurementSeries
 
 ## Properties
@@ -8,5 +9,7 @@ Name | Type | Description | Notes
 **Series** | [**List&lt;MeasurementFragmentSeries&gt;**](MeasurementFragmentSeries.md) | An array containing the type of series and units. | [optional] 
 **Truncated** | **bool** | If there were more than 5000 values, the final result was truncated. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

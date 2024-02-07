@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.LoginOption
-Login option properties.
 
 ## Properties
 
@@ -21,5 +21,7 @@ Name | Type | Description | Notes
 **VisibleOnLoginPage** | **bool** | Indicates if this login option is available in the login page (only for SSO). | [optional] 
 **Type** | **string** | The type of authentication. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.GroupRoles
-An object containing user roles for this group.
 
 ## Properties
 
@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **References** | [**List&lt;RoleReference&gt;**](RoleReference.md) | A list of user role references. | [optional] 
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

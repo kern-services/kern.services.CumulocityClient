@@ -2,15 +2,17 @@
 
 All URIs are relative to *https://<TENANT_DOMAIN>*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**DeleteExternalIDResource**](ExternalIDsApi.md#deleteexternalidresource) | **DELETE** /identity/externalIds/{type}/{externalId} | Remove a specific external ID |
-| [**GetExternalIDCollectionResource**](ExternalIDsApi.md#getexternalidcollectionresource) | **GET** /identity/globalIds/{id}/externalIds | Retrieve all external IDs of a specific managed object |
-| [**GetExternalIDResource**](ExternalIDsApi.md#getexternalidresource) | **GET** /identity/externalIds/{type}/{externalId} | Retrieve a specific external ID |
-| [**PostExternalIDCollectionResource**](ExternalIDsApi.md#postexternalidcollectionresource) | **POST** /identity/globalIds/{id}/externalIds | Create an external ID |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**DeleteExternalIDResource**](ExternalIDsApi.md#deleteexternalidresource) | **DELETE** /identity/externalIds/{type}/{externalId} | Remove a specific external ID
+[**GetExternalIDCollectionResource**](ExternalIDsApi.md#getexternalidcollectionresource) | **GET** /identity/globalIds/{id}/externalIds | Retrieve all external IDs of a specific managed object
+[**GetExternalIDResource**](ExternalIDsApi.md#getexternalidresource) | **GET** /identity/externalIds/{type}/{externalId} | Retrieve a specific external ID
+[**PostExternalIDCollectionResource**](ExternalIDsApi.md#postexternalidcollectionresource) | **POST** /identity/globalIds/{id}/externalIds | Create an external ID
 
-<a name="deleteexternalidresource"></a>
-# **DeleteExternalIDResource**
+
+
+## DeleteExternalIDResource
+
 > void DeleteExternalIDResource (string type, string externalId)
 
 Remove a specific external ID
@@ -18,6 +20,7 @@ Remove a specific external ID
 Remove a specific external ID of a particular type.  <section><h5>Required roles</h5> ROLE_IDENTITY_ADMIN <b>OR</b> owner of the resource <b>OR</b> MANAGED_OBJECT_ADMIN permission on the resource </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,17 +34,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ExternalIDsApi(config);
+            var apiInstance = new ExternalIDsApi(Configuration.Default);
             var type = c8y_Serial;  // string | The identifier used in the external system that Cumulocity IoT interfaces with.
             var externalId = simulator_145074_1;  // string | The type of the external identifier.
 
@@ -50,10 +52,10 @@ namespace Example
                 // Remove a specific external ID
                 apiInstance.DeleteExternalIDResource(type, externalId);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling ExternalIDsApi.DeleteExternalIDResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling ExternalIDsApi.DeleteExternalIDResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -61,29 +63,13 @@ namespace Example
 }
 ```
 
-#### Using the DeleteExternalIDResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Remove a specific external ID
-    apiInstance.DeleteExternalIDResourceWithHttpInfo(type, externalId);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ExternalIDsApi.DeleteExternalIDResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **type** | **string** | The identifier used in the external system that Cumulocity IoT interfaces with. |  |
-| **externalId** | **string** | The type of the external identifier. |  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| The identifier used in the external system that Cumulocity IoT interfaces with. | 
+ **externalId** | **string**| The type of the external identifier. | 
 
 ### Return type
 
@@ -95,8 +81,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -106,10 +92,14 @@ void (empty response body)
 | **401** | Authentication information is missing or invalid. |  -  |
 | **404** | External ID not found. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-<a name="getexternalidcollectionresource"></a>
-# **GetExternalIDCollectionResource**
+
+## GetExternalIDCollectionResource
+
 > ExternalIds GetExternalIDCollectionResource (string id)
 
 Retrieve all external IDs of a specific managed object
@@ -117,6 +107,7 @@ Retrieve all external IDs of a specific managed object
 Retrieve all external IDs of a existing managed object (identified by ID).  <section><h5>Required roles</h5> ROLE_IDENTITY_READ <b>OR</b> owner of the resource <b>OR</b> MANAGED_OBJECT_READ permission on the resource </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -130,17 +121,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ExternalIDsApi(config);
+            var apiInstance = new ExternalIDsApi(Configuration.Default);
             var id = 251982;  // string | Unique identifier of the managed object.
 
             try
@@ -149,10 +139,10 @@ namespace Example
                 ExternalIds result = apiInstance.GetExternalIDCollectionResource(id);
                 Debug.WriteLine(result);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDCollectionResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDCollectionResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -160,31 +150,12 @@ namespace Example
 }
 ```
 
-#### Using the GetExternalIDCollectionResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve all external IDs of a specific managed object
-    ApiResponse<ExternalIds> response = apiInstance.GetExternalIDCollectionResourceWithHttpInfo(id);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDCollectionResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **string** | Unique identifier of the managed object. |  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Unique identifier of the managed object. | 
 
 ### Return type
 
@@ -196,8 +167,8 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.com.nsn.cumulocity.externalidcollection+json, application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.com.nsn.cumulocity.externalidcollection+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -206,10 +177,14 @@ catch (ApiException e)
 | **200** | The request has succeeded and all the external IDs are sent in the response. |  -  |
 | **401** | Authentication information is missing or invalid. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-<a name="getexternalidresource"></a>
-# **GetExternalIDResource**
+
+## GetExternalIDResource
+
 > ExternalId GetExternalIDResource (string type, string externalId)
 
 Retrieve a specific external ID
@@ -217,6 +192,7 @@ Retrieve a specific external ID
 Retrieve a specific external ID of a particular type.  <section><h5>Required roles</h5> ROLE_IDENTITY_READ <b>OR</b> owner of the resource <b>OR</b> MANAGED_OBJECT_READ permission on the resource </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -230,17 +206,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ExternalIDsApi(config);
+            var apiInstance = new ExternalIDsApi(Configuration.Default);
             var type = c8y_Serial;  // string | The identifier used in the external system that Cumulocity IoT interfaces with.
             var externalId = simulator_145074_1;  // string | The type of the external identifier.
 
@@ -250,10 +225,10 @@ namespace Example
                 ExternalId result = apiInstance.GetExternalIDResource(type, externalId);
                 Debug.WriteLine(result);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -261,32 +236,13 @@ namespace Example
 }
 ```
 
-#### Using the GetExternalIDResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve a specific external ID
-    ApiResponse<ExternalId> response = apiInstance.GetExternalIDResourceWithHttpInfo(type, externalId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ExternalIDsApi.GetExternalIDResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **type** | **string** | The identifier used in the external system that Cumulocity IoT interfaces with. |  |
-| **externalId** | **string** | The type of the external identifier. |  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| The identifier used in the external system that Cumulocity IoT interfaces with. | 
+ **externalId** | **string**| The type of the external identifier. | 
 
 ### Return type
 
@@ -298,8 +254,8 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.com.nsn.cumulocity.externalid+json, application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.com.nsn.cumulocity.externalid+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -309,17 +265,22 @@ catch (ApiException e)
 | **401** | Authentication information is missing or invalid. |  -  |
 | **404** | External ID not found. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-<a name="postexternalidcollectionresource"></a>
-# **PostExternalIDCollectionResource**
-> ExternalId PostExternalIDCollectionResource (string id, ExternalId externalId, string? accept = null)
+
+## PostExternalIDCollectionResource
+
+> ExternalId PostExternalIDCollectionResource (string id, ExternalId externalId, string accept = null)
 
 Create an external ID
 
 Create an external ID for an existing managed object (identified by ID).  <section><h5>Required roles</h5> ROLE_IDENTITY_ADMIN <b>OR</b> owner of the resource <b>OR</b> MANAGED_OBJECT_ADMIN permission on the resource </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -333,20 +294,19 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ExternalIDsApi(config);
+            var apiInstance = new ExternalIDsApi(Configuration.Default);
             var id = 251982;  // string | Unique identifier of the managed object.
             var externalId = new ExternalId(); // ExternalId | 
-            var accept = application/json;  // string? | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
+            var accept = application/json;  // string | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
 
             try
             {
@@ -354,10 +314,10 @@ namespace Example
                 ExternalId result = apiInstance.PostExternalIDCollectionResource(id, externalId, accept);
                 Debug.WriteLine(result);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling ExternalIDsApi.PostExternalIDCollectionResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling ExternalIDsApi.PostExternalIDCollectionResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -365,33 +325,14 @@ namespace Example
 }
 ```
 
-#### Using the PostExternalIDCollectionResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Create an external ID
-    ApiResponse<ExternalId> response = apiInstance.PostExternalIDCollectionResourceWithHttpInfo(id, externalId, accept);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ExternalIDsApi.PostExternalIDCollectionResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **id** | **string** | Unique identifier of the managed object. |  |
-| **externalId** | [**ExternalId**](ExternalId.md) |  |  |
-| **accept** | **string?** | Advertises which content types, expressed as MIME types, the client is able to understand. | [optional]  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Unique identifier of the managed object. | 
+ **externalId** | [**ExternalId**](ExternalId.md)|  | 
+ **accept** | **string**| Advertises which content types, expressed as MIME types, the client is able to understand. | [optional] 
 
 ### Return type
 
@@ -403,8 +344,8 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: application/vnd.com.nsn.cumulocity.externalid+json
- - **Accept**: application/vnd.com.nsn.cumulocity.externalid+json, application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: application/vnd.com.nsn.cumulocity.externalid+json
+- **Accept**: application/vnd.com.nsn.cumulocity.externalid+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -414,5 +355,8 @@ catch (ApiException e)
 | **401** | Authentication information is missing or invalid. |  -  |
 | **409** | Duplicate – Identity already bound to a different Global ID. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

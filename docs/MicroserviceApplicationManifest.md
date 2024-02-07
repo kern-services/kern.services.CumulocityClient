@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.MicroserviceApplicationManifest
-The manifest of the microservice application.
 
 ## Properties
 
@@ -22,5 +22,7 @@ Name | Type | Description | Notes
 **SettingsCategory** | **string** | Allows to specify a custom category for microservice settings. By default, &#x60;contextPath&#x60; is used.  | [optional] 
 **_Version** | **string** | Application version. Must be a correct [SemVer](https://semver.org/) value but the \&quot;+\&quot; sign is disallowed.  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

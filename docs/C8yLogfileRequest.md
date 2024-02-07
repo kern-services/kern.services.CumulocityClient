@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.C8yLogfileRequest
-Request a device to send a log file and view it in Cumulocity IoT's log viewer.
 
 ## Properties
 
@@ -12,5 +12,7 @@ Name | Type | Description | Notes
 **MaximumLines** | **int** | Upper limit of the number of lines that should be sent to Cumulocity IoT after filtering. | [optional] 
 **File** | **string** | A link to the log file request. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

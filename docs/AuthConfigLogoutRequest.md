@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.AuthConfigLogoutRequest
 
 ## Properties
@@ -11,5 +12,7 @@ Name | Type | Description | Notes
 **RequestParams** | **Dictionary&lt;string, string&gt;** | Parameters of the request. | [optional] 
 **Url** | **string** | Target of the request described as a URL. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

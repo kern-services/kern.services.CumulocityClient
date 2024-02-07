@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.TrustedCertificate
 
 ## Properties
@@ -18,5 +19,7 @@ Name | Type | Description | Notes
 **Subject** | **string** | Name of the organization to which the certificate belongs. | [optional] [readonly] 
 **_Version** | **int** | Version of the X.509 certificate standard. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

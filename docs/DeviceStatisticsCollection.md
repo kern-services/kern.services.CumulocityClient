@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.DeviceStatisticsCollection
-Statistics of the tenant devices.
 
 ## Properties
 
@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 **Statistics** | [**List&lt;DeviceStatistics&gt;**](DeviceStatistics.md) | An array containing the tenant device statistics. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

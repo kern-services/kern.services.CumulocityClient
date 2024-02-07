@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.C8yNetworkC8yLAN
-Local network information.
 
 ## Properties
 
@@ -11,5 +11,7 @@ Name | Type | Description | Notes
 **Enabled** | **int** | Indicator showing if the interface is enabled. | [optional] 
 **Mac** | **string** | MAC address of the network interface. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

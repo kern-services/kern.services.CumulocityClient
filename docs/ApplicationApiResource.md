@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.ApplicationApiResource
 
 ## Properties
@@ -12,5 +13,7 @@ Name | Type | Description | Notes
 **ApplicationsByUser** | **string** | Read-only collection of all applications owned by a particular user. | [optional] 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

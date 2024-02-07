@@ -2,14 +2,16 @@
 
 All URIs are relative to *https://<TENANT_DOMAIN>*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**DeleteTenantApplicationReferenceResource**](TenantApplicationsApi.md#deletetenantapplicationreferenceresource) | **DELETE** /tenant/tenants/{tenantId}/applications/{applicationId} | Unsubscribe from an application |
-| [**GetTenantApplicationReferenceCollectionResource**](TenantApplicationsApi.md#gettenantapplicationreferencecollectionresource) | **GET** /tenant/tenants/{tenantId}/applications | Retrieve subscribed applications |
-| [**PostTenantApplicationReferenceCollectionResource**](TenantApplicationsApi.md#posttenantapplicationreferencecollectionresource) | **POST** /tenant/tenants/{tenantId}/applications | Subscribe to an application |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**DeleteTenantApplicationReferenceResource**](TenantApplicationsApi.md#deletetenantapplicationreferenceresource) | **DELETE** /tenant/tenants/{tenantId}/applications/{applicationId} | Unsubscribe from an application
+[**GetTenantApplicationReferenceCollectionResource**](TenantApplicationsApi.md#gettenantapplicationreferencecollectionresource) | **GET** /tenant/tenants/{tenantId}/applications | Retrieve subscribed applications
+[**PostTenantApplicationReferenceCollectionResource**](TenantApplicationsApi.md#posttenantapplicationreferencecollectionresource) | **POST** /tenant/tenants/{tenantId}/applications | Subscribe to an application
 
-<a name="deletetenantapplicationreferenceresource"></a>
-# **DeleteTenantApplicationReferenceResource**
+
+
+## DeleteTenantApplicationReferenceResource
+
 > void DeleteTenantApplicationReferenceResource (string tenantId, string applicationId)
 
 Unsubscribe from an application
@@ -17,6 +19,7 @@ Unsubscribe from an application
 Unsubscribe a tenant (by a given tenant ID) from an application (by a given application ID).  <section><h5>Required roles</h5> (ROLE_APPLICATION_MANAGEMENT_ADMIN <b>AND</b> is the application owner <b>AND</b> is the current tenant) <b>OR</b><br> ((ROLE_TENANT_MANAGEMENT_ADMIN <b>OR</b> ROLE_TENANT_MANAGEMENT_UPDATE) <b>AND</b> (the current tenant is its parent <b>OR</b> is the management tenant)) </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,17 +33,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new TenantApplicationsApi(config);
+            var apiInstance = new TenantApplicationsApi(Configuration.Default);
             var tenantId = t07007007;  // string | Unique identifier of a Cumulocity IoT tenant.
             var applicationId = 20200301;  // string | Unique identifier of the application.
 
@@ -49,10 +51,10 @@ namespace Example
                 // Unsubscribe from an application
                 apiInstance.DeleteTenantApplicationReferenceResource(tenantId, applicationId);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling TenantApplicationsApi.DeleteTenantApplicationReferenceResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling TenantApplicationsApi.DeleteTenantApplicationReferenceResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -60,29 +62,13 @@ namespace Example
 }
 ```
 
-#### Using the DeleteTenantApplicationReferenceResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Unsubscribe from an application
-    apiInstance.DeleteTenantApplicationReferenceResourceWithHttpInfo(tenantId, applicationId);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling TenantApplicationsApi.DeleteTenantApplicationReferenceResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **tenantId** | **string** | Unique identifier of a Cumulocity IoT tenant. |  |
-| **applicationId** | **string** | Unique identifier of the application. |  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | **string**| Unique identifier of a Cumulocity IoT tenant. | 
+ **applicationId** | **string**| Unique identifier of the application. | 
 
 ### Return type
 
@@ -94,8 +80,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -105,10 +91,14 @@ void (empty response body)
 | **401** | Authentication information is missing or invalid. |  -  |
 | **404** | Tenant not found. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-<a name="gettenantapplicationreferencecollectionresource"></a>
-# **GetTenantApplicationReferenceCollectionResource**
+
+## GetTenantApplicationReferenceCollectionResource
+
 > ApplicationReferenceCollection GetTenantApplicationReferenceCollectionResource (string tenantId, int? currentPage = null, int? pageSize = null, bool? withTotalElements = null, bool? withTotalPages = null)
 
 Retrieve subscribed applications
@@ -116,6 +106,7 @@ Retrieve subscribed applications
 Retrieve the tenant subscribed applications by a given tenant ID.  <section><h5>Required roles</h5> (ROLE_TENANT_MANAGEMENT_READ <b>OR</b> ROLE_TENANT_ADMIN) <b>AND</b> (the current tenant is its parent <b>OR</b> is the management tenant) </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -129,17 +120,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new TenantApplicationsApi(config);
+            var apiInstance = new TenantApplicationsApi(Configuration.Default);
             var tenantId = t07007007;  // string | Unique identifier of a Cumulocity IoT tenant.
             var currentPage = 3;  // int? | The current page of the paginated results. (optional)  (default to 1)
             var pageSize = 10;  // int? | Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects. (optional)  (default to 5)
@@ -152,10 +142,10 @@ namespace Example
                 ApplicationReferenceCollection result = apiInstance.GetTenantApplicationReferenceCollectionResource(tenantId, currentPage, pageSize, withTotalElements, withTotalPages);
                 Debug.WriteLine(result);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling TenantApplicationsApi.GetTenantApplicationReferenceCollectionResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling TenantApplicationsApi.GetTenantApplicationReferenceCollectionResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -163,35 +153,16 @@ namespace Example
 }
 ```
 
-#### Using the GetTenantApplicationReferenceCollectionResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve subscribed applications
-    ApiResponse<ApplicationReferenceCollection> response = apiInstance.GetTenantApplicationReferenceCollectionResourceWithHttpInfo(tenantId, currentPage, pageSize, withTotalElements, withTotalPages);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling TenantApplicationsApi.GetTenantApplicationReferenceCollectionResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **tenantId** | **string** | Unique identifier of a Cumulocity IoT tenant. |  |
-| **currentPage** | **int?** | The current page of the paginated results. | [optional] [default to 1] |
-| **pageSize** | **int?** | Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects. | [optional] [default to 5] |
-| **withTotalElements** | **bool?** | When set to &#x60;true&#x60;, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)). | [optional] [default to false] |
-| **withTotalPages** | **bool?** | When set to &#x60;true&#x60;, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)). | [optional] [default to false] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | **string**| Unique identifier of a Cumulocity IoT tenant. | 
+ **currentPage** | **int?**| The current page of the paginated results. | [optional] [default to 1]
+ **pageSize** | **int?**| Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects. | [optional] [default to 5]
+ **withTotalElements** | **bool?**| When set to &#x60;true&#x60;, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)). | [optional] [default to false]
+ **withTotalPages** | **bool?**| When set to &#x60;true&#x60;, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)). | [optional] [default to false]
 
 ### Return type
 
@@ -203,8 +174,8 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.com.nsn.cumulocity.applicationreferencecollection+json, application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.com.nsn.cumulocity.applicationreferencecollection+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -215,17 +186,22 @@ catch (ApiException e)
 | **403** | Not authorized to perform this operation. |  -  |
 | **404** | Tenant not found. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
-<a name="posttenantapplicationreferencecollectionresource"></a>
-# **PostTenantApplicationReferenceCollectionResource**
-> ApplicationReference PostTenantApplicationReferenceCollectionResource (string tenantId, SubscribedApplicationReference subscribedApplicationReference, string? accept = null)
+
+## PostTenantApplicationReferenceCollectionResource
+
+> ApplicationReference PostTenantApplicationReferenceCollectionResource (string tenantId, SubscribedApplicationReference subscribedApplicationReference, string accept = null)
 
 Subscribe to an application
 
 Subscribe a tenant (by a given ID) to an application.  <section><h5>Required roles</h5> 1. the current tenant is application owner and has the role ROLE_APPLICATION_MANAGEMENT_ADMIN <b>OR</b><br> 2. for applications that are not microservices, the current tenant is the management tenant or the parent of the application owner tenant, and the user has one of the follwoing roles: ROLE_TENANT_MANAGEMENT_ADMIN, ROLE_TENANT_MANAGEMENT_UPDATE <b>OR</b><br> 3. for microservices, the current tenant is the management tenant or the parent of the application owner tenant, and the user has the role ROLE_TENANT_MANAGEMENT_ADMIN OR ROLE_TENANT_MANAGEMENT_UPDATE and one of following conditions is met:<br> * the microservice has no manifest<br> * the microservice version is supported<br> * the current tenant is subscribed to 'feature-privileged-microservice-hosting' </section> 
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -239,20 +215,19 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            config.Username = "YOUR_USERNAME";
-            config.Password = "YOUR_PASSWORD";
-            // Configure Bearer token for authorization: OAI-Secure
-            config.AccessToken = "YOUR_BEARER_TOKEN";
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+            // Configure HTTP bearer authorization: OAI-Secure
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new TenantApplicationsApi(config);
+            var apiInstance = new TenantApplicationsApi(Configuration.Default);
             var tenantId = t07007007;  // string | Unique identifier of a Cumulocity IoT tenant.
             var subscribedApplicationReference = new SubscribedApplicationReference(); // SubscribedApplicationReference | 
-            var accept = application/json;  // string? | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
+            var accept = application/json;  // string | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
 
             try
             {
@@ -260,10 +235,10 @@ namespace Example
                 ApplicationReference result = apiInstance.PostTenantApplicationReferenceCollectionResource(tenantId, subscribedApplicationReference, accept);
                 Debug.WriteLine(result);
             }
-            catch (ApiException  e)
+            catch (ApiException e)
             {
-                Debug.Print("Exception when calling TenantApplicationsApi.PostTenantApplicationReferenceCollectionResource: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print("Exception when calling TenantApplicationsApi.PostTenantApplicationReferenceCollectionResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -271,33 +246,14 @@ namespace Example
 }
 ```
 
-#### Using the PostTenantApplicationReferenceCollectionResourceWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Subscribe to an application
-    ApiResponse<ApplicationReference> response = apiInstance.PostTenantApplicationReferenceCollectionResourceWithHttpInfo(tenantId, subscribedApplicationReference, accept);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling TenantApplicationsApi.PostTenantApplicationReferenceCollectionResourceWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **tenantId** | **string** | Unique identifier of a Cumulocity IoT tenant. |  |
-| **subscribedApplicationReference** | [**SubscribedApplicationReference**](SubscribedApplicationReference.md) |  |  |
-| **accept** | **string?** | Advertises which content types, expressed as MIME types, the client is able to understand. | [optional]  |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenantId** | **string**| Unique identifier of a Cumulocity IoT tenant. | 
+ **subscribedApplicationReference** | [**SubscribedApplicationReference**](SubscribedApplicationReference.md)|  | 
+ **accept** | **string**| Advertises which content types, expressed as MIME types, the client is able to understand. | [optional] 
 
 ### Return type
 
@@ -309,8 +265,8 @@ catch (ApiException e)
 
 ### HTTP request headers
 
- - **Content-Type**: application/vnd.com.nsn.cumulocity.applicationreference+json
- - **Accept**: application/vnd.com.nsn.cumulocity.applicationreference+json, application/vnd.com.nsn.cumulocity.error+json
+- **Content-Type**: application/vnd.com.nsn.cumulocity.applicationreference+json
+- **Accept**: application/vnd.com.nsn.cumulocity.applicationreference+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -322,5 +278,8 @@ catch (ApiException e)
 | **409** | The application is already assigned to the tenant. |  -  |
 | **422** | Unprocessable Entity – invalid payload. |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

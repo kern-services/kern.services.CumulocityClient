@@ -1,3 +1,4 @@
+
 # kern.services.CumulocityClient.Model.NotificationSubscription
 
 ## Properties
@@ -12,5 +13,7 @@ Name | Type | Description | Notes
 **Subscription** | **string** | The subscription name. Each subscription is identified by a unique name within a specific context. | 
 **SubscriptionFilter** | [**NotificationSubscriptionSubscriptionFilter**](NotificationSubscriptionSubscriptionFilter.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 

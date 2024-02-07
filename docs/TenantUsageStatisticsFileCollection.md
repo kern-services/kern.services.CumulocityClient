@@ -1,5 +1,5 @@
+
 # kern.services.CumulocityClient.Model.TenantUsageStatisticsFileCollection
-Statistics files metadata.
 
 ## Properties
 
@@ -11,5 +11,7 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **StatisticsFiles** | [**List&lt;StatisticsFile&gt;**](StatisticsFile.md) | An array containing the usage statistics files metadata. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to README]](../README.md)
 
