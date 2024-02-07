@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>kern.services.CumulocityClient</AssemblyName>
     <PackageId>kern.services.CumulocityClient</PackageId>
     <OutputType>Library</OutputType>
@@ -10,29 +11,26 @@
     <AssemblyTitle>OpenAPI Library</AssemblyTitle>
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>kern.services.CumulocityClient</RootNamespace>
     <Version>10.15.1</Version>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\kern.services.CumulocityClient.xml</DocumentationFile>
+    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="105.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="JsonSubTypes" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="Polly" Version="8.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml" />
+    <None Remove="System.Web" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
 </Project>

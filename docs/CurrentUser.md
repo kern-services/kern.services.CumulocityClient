@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.CurrentUser
+The current user.
 
 ## Properties
 
@@ -19,7 +19,5 @@ Name | Type | Description | Notes
 **UserName** | **string** | The user&#39;s username. It can have a maximum of 1000 characters. | [optional] 
 **DevicePermissions** | **Dictionary&lt;string, List&lt;string&gt;&gt;** | An object with a list of the user&#39;s device permissions. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

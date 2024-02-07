@@ -1,42 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
     <AssemblyName>kern.services.CumulocityClient.Test</AssemblyName>
-    <PackageId>kern.services.CumulocityClient.Test</PackageId>
-    <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>kern.services.CumulocityClient.Test</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.14.0" />
-    <PackageReference Include="RestSharp" Version="105.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="JsonSubTypes" Version="2.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="xunit" Version="2.6.6" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\kern.services.CumulocityClient\kern.services.CumulocityClient.csproj" />
   </ItemGroup>
-
 </Project>

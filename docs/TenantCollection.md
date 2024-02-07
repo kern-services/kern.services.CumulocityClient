@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.TenantCollection
 
 ## Properties
@@ -11,7 +10,5 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **Tenants** | [**List&lt;Tenant&gt;**](Tenant.md) | An array containing the results (subtenants) of the request. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

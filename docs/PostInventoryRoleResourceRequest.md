@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.PostInventoryRoleResourceRequest
 
 ## Properties
@@ -11,7 +10,5 @@ Name | Type | Description | Notes
 **Permissions** | [**List&lt;InventoryRolePermission&gt;**](InventoryRolePermission.md) | A set of permissions for this inventory role. | 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

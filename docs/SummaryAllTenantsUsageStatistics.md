@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.SummaryAllTenantsUsageStatistics
 
 ## Properties
@@ -32,7 +31,5 @@ Name | Type | Description | Notes
 **TenantId** | **string** | Unique identifier of a Cumulocity IoT tenant. | [optional] [readonly] 
 **TotalResourceCreateAndUpdateCount** | **int** | Sum of all inbound transfers. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

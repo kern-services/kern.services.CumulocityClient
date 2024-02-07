@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.PutAlarmResourceRequest
 
 ## Properties
@@ -18,7 +17,5 @@ Name | Type | Description | Notes
 **Time** | **Object** |  | [optional] [readonly] 
 **Type** | **Object** |  | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

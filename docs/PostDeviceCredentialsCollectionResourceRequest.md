@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.PostDeviceCredentialsCollectionResourceRequest
 
 ## Properties
@@ -11,7 +10,5 @@ Name | Type | Description | Notes
 **TenantId** | **string** | Tenant ID for these device credentials. | [optional] [readonly] 
 **Username** | **string** | Username of these device credentials. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

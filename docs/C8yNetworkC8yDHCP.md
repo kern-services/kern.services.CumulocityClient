@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.C8yNetworkC8yDHCP
+Information for DHCP server status.
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **AddressRange** | [**C8yNetworkC8yDHCPAddressRange**](C8yNetworkC8yDHCPAddressRange.md) |  | [optional] 
 **Enabled** | **int** | Indicator showing if the DHCP server is enabled. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

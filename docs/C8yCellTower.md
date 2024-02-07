@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.C8yCellTower
+Detailed information about a neighbouring cell tower.
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **PrimaryScramblingCode** | **decimal** | The primary scrambling code for WCDMA and physical CellId for LTE. | [optional] 
 **Serving** | **decimal** | Specify with 0/1 if the cell is serving or not. If not specified, the first cell is assumed to be serving. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

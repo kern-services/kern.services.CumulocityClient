@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.Binary
 
 ## Properties
@@ -15,7 +14,5 @@ Name | Type | Description | Notes
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 **Type** | **string** | Type of the managed object. It is set from the &#x60;object&#x60; contained in the payload. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.OptionCollection
+All available options of the tenant.
 
 ## Properties
 
@@ -11,7 +11,5 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **Options** | [**List&lt;Option&gt;**](Option.md) | An array containing the available options. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

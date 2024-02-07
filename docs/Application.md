@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.Application
 
 ## Properties
@@ -27,7 +26,5 @@ Name | Type | Description | Notes
 **ActiveVersionId** | **string** | The active version ID of the application. For microservice applications the active version ID is the microservice manifest version ID. | [optional] [readonly] 
 **ResourcesUrl** | **string** | URL to the application base directory hosted on an external server. Only present in legacy hosted applications. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

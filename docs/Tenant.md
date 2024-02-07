@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.Tenant
 
 ## Properties
@@ -22,7 +21,5 @@ Name | Type | Description | Notes
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 **Status** | **string** | Current status of the tenant. | [optional] [readonly] [default to StatusEnum.ACTIVE]
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

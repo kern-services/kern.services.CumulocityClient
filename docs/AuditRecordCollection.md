@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.AuditRecordCollection
 
 ## Properties
@@ -11,7 +10,5 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **AuditRecords** | [**List&lt;AuditRecord&gt;**](AuditRecord.md) | An array containing the results of the request. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

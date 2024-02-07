@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.AlarmsApiResource
 
 ## Properties
@@ -15,7 +14,5 @@ Name | Type | Description | Notes
 **AlarmsForSourceAndStatus** | **string** | Read-only collection of all alarms for a specific source object in a particular status. | [optional] 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

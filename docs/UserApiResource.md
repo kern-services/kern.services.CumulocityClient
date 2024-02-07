@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.UserApiResource
 
 ## Properties
@@ -13,7 +12,5 @@ Name | Type | Description | Notes
 **GroupByName** | **string** | Reference to a resource of type group. | [optional] 
 **Roles** | **string** | Collection of all roles. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

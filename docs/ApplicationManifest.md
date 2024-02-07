@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.ApplicationManifest
 
 ## Properties
@@ -20,13 +19,11 @@ Name | Type | Description | Notes
 **Scale** | **string** | Allows to configure a microservice auto scaling policy. If the microservice uses a lot of CPU resources, a second instance will be created automatically when this is set to &#x60;AUTO&#x60;. The default is &#x60;NONE&#x60;, meaning auto scaling will not happen.  | [optional] [default to ScaleEnum.NONE]
 **Settings** | [**List&lt;ApplicationSettingsInner&gt;**](ApplicationSettingsInner.md) | A list of settings objects for this microservice application. | [optional] 
 **SettingsCategory** | **string** | Allows to specify a custom category for microservice settings. By default, &#x60;contextPath&#x60; is used.  | [optional] 
-**_Version** | **string** | Application version. Must be a correct [SemVer](https://semver.org/) value but the \&quot;+\&quot; sign is disallowed.  | [optional] 
+**VarVersion** | **string** | Application version. Must be a correct [SemVer](https://semver.org/) value but the \&quot;+\&quot; sign is disallowed.  | [optional] 
 **Webpaas** | **bool** | A legacy flag that identified a certain type of web application that would control the behavior of plugin tab in the application details view. It is no longer used.  | [optional] 
 **ContentSecurityPolicy** | **string** | The content security policy of the application. | [optional] 
 **NoAppSwitcher** | **bool** | A flag that decides if the application is shown in the app switcher on the UI. | [optional] 
 **TabsHorizontal** | **bool** | A flag that decides if the application tabs are displayed horizontally or not. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -2,20 +2,18 @@
 
 All URIs are relative to *https://<TENANT_DOMAIN>*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetCurrentUserResource**](CurrentUserApi.md#getcurrentuserresource) | **GET** /user/currentUser | Retrieve the current user
-[**GetCurrentUserTfaTotpResourceActivity**](CurrentUserApi.md#getcurrentusertfatotpresourceactivity) | **GET** /user/currentUser/totpSecret/activity | Returns the activation state of the two-factor authentication feature.
-[**PostCurrentUserTfaTotpResource**](CurrentUserApi.md#postcurrentusertfatotpresource) | **POST** /user/currentUser/totpSecret | Generate secret to set up TFA
-[**PostCurrentUserTfaTotpResourceActivity**](CurrentUserApi.md#postcurrentusertfatotpresourceactivity) | **POST** /user/currentUser/totpSecret/activity | Activates or deactivates the two-factor authentication feature
-[**PostCurrentUserTfaTotpResourceVerify**](CurrentUserApi.md#postcurrentusertfatotpresourceverify) | **POST** /user/currentUser/totpSecret/verify | Verify TFA code
-[**PutCurrentUserPasswordResource**](CurrentUserApi.md#putcurrentuserpasswordresource) | **PUT** /user/currentUser/password | Update the current user&#39;s password
-[**PutCurrentUserResource**](CurrentUserApi.md#putcurrentuserresource) | **PUT** /user/currentUser | Update the current user
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetCurrentUserResource**](CurrentUserApi.md#getcurrentuserresource) | **GET** /user/currentUser | Retrieve the current user |
+| [**GetCurrentUserTfaTotpResourceActivity**](CurrentUserApi.md#getcurrentusertfatotpresourceactivity) | **GET** /user/currentUser/totpSecret/activity | Returns the activation state of the two-factor authentication feature. |
+| [**PostCurrentUserTfaTotpResource**](CurrentUserApi.md#postcurrentusertfatotpresource) | **POST** /user/currentUser/totpSecret | Generate secret to set up TFA |
+| [**PostCurrentUserTfaTotpResourceActivity**](CurrentUserApi.md#postcurrentusertfatotpresourceactivity) | **POST** /user/currentUser/totpSecret/activity | Activates or deactivates the two-factor authentication feature |
+| [**PostCurrentUserTfaTotpResourceVerify**](CurrentUserApi.md#postcurrentusertfatotpresourceverify) | **POST** /user/currentUser/totpSecret/verify | Verify TFA code |
+| [**PutCurrentUserPasswordResource**](CurrentUserApi.md#putcurrentuserpasswordresource) | **PUT** /user/currentUser/password | Update the current user&#39;s password |
+| [**PutCurrentUserResource**](CurrentUserApi.md#putcurrentuserresource) | **PUT** /user/currentUser | Update the current user |
 
-
-
-## GetCurrentUserResource
-
+<a id="getcurrentuserresource"></a>
+# **GetCurrentUserResource**
 > CurrentUser GetCurrentUserResource ()
 
 Retrieve the current user
@@ -23,7 +21,6 @@ Retrieve the current user
 Retrieve the user reference of the current user.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_READ <b>OR</b> ROLE_SYSTEM </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,16 +34,17 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
 
             try
             {
@@ -54,10 +52,10 @@ namespace Example
                 CurrentUser result = apiInstance.GetCurrentUserResource();
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserResource: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserResource: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -65,10 +63,28 @@ namespace Example
 }
 ```
 
+#### Using the GetCurrentUserResourceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve the current user
+    ApiResponse<CurrentUser> response = apiInstance.GetCurrentUserResourceWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserResourceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
-
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**CurrentUser**](CurrentUser.md)
@@ -79,8 +95,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/vnd.com.nsn.cumulocity.currentuser+json, application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.com.nsn.cumulocity.currentuser+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -89,14 +105,10 @@ This endpoint does not need any parameter.
 | **200** | The request has succeeded and the current user is sent in the response. |  -  |
 | **401** | Authentication information is missing or invalid. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## GetCurrentUserTfaTotpResourceActivity
-
+<a id="getcurrentusertfatotpresourceactivity"></a>
+# **GetCurrentUserTfaTotpResourceActivity**
 > CurrentUserTotpSecretActivity GetCurrentUserTfaTotpResourceActivity ()
 
 Returns the activation state of the two-factor authentication feature.
@@ -104,7 +116,6 @@ Returns the activation state of the two-factor authentication feature.
 Returns the activation state of the two-factor authentication feature for the current user.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_READ <b>OR</b> ROLE_SYSTEM </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -118,14 +129,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
 
             try
             {
@@ -133,10 +145,10 @@ namespace Example
                 CurrentUserTotpSecretActivity result = apiInstance.GetCurrentUserTfaTotpResourceActivity();
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserTfaTotpResourceActivity: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserTfaTotpResourceActivity: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -144,10 +156,28 @@ namespace Example
 }
 ```
 
+#### Using the GetCurrentUserTfaTotpResourceActivityWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Returns the activation state of the two-factor authentication feature.
+    ApiResponse<CurrentUserTotpSecretActivity> response = apiInstance.GetCurrentUserTfaTotpResourceActivityWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.GetCurrentUserTfaTotpResourceActivityWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
-
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**CurrentUserTotpSecretActivity**](CurrentUserTotpSecretActivity.md)
@@ -158,8 +188,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -169,22 +199,17 @@ This endpoint does not need any parameter.
 | **401** | Authentication information is missing or invalid. |  -  |
 | **404** | User not found. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## PostCurrentUserTfaTotpResource
-
-> CurrentUserTotpSecret PostCurrentUserTfaTotpResource (string accept = null)
+<a id="postcurrentusertfatotpresource"></a>
+# **PostCurrentUserTfaTotpResource**
+> CurrentUserTotpSecret PostCurrentUserTfaTotpResource (string? accept = null)
 
 Generate secret to set up TFA
 
 Generate a secret code to create a QR code to set up the two-factor authentication functionality using a TFA app/service.  For more information about the feature, see [User Guide > Administration > Two-factor authentication](https://cumulocity.com/guides/users-guide/administration/#tfa) in the *Cumulocity IoT documentation*.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_READ <b>OR</b> ROLE_SYSTEM </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -198,15 +223,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
-            var accept = application/json;  // string | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
+            var apiInstance = new CurrentUserApi(config);
+            var accept = application/json;  // string? | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
 
             try
             {
@@ -214,10 +240,10 @@ namespace Example
                 CurrentUserTotpSecret result = apiInstance.PostCurrentUserTfaTotpResource(accept);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResource: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResource: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -225,12 +251,31 @@ namespace Example
 }
 ```
 
+#### Using the PostCurrentUserTfaTotpResourceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Generate secret to set up TFA
+    ApiResponse<CurrentUserTotpSecret> response = apiInstance.PostCurrentUserTfaTotpResourceWithHttpInfo(accept);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accept** | **string**| Advertises which content types, expressed as MIME types, the client is able to understand. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accept** | **string?** | Advertises which content types, expressed as MIME types, the client is able to understand. | [optional]  |
 
 ### Return type
 
@@ -242,8 +287,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -252,14 +297,10 @@ Name | Type | Description  | Notes
 | **200** | The request has succeeded and the secret is sent in the response. |  -  |
 | **401** | Authentication information is missing or invalid. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## PostCurrentUserTfaTotpResourceActivity
-
+<a id="postcurrentusertfatotpresourceactivity"></a>
+# **PostCurrentUserTfaTotpResourceActivity**
 > void PostCurrentUserTfaTotpResourceActivity (CurrentUserTotpSecretActivity currentUserTotpSecretActivity)
 
 Activates or deactivates the two-factor authentication feature
@@ -267,7 +308,6 @@ Activates or deactivates the two-factor authentication feature
 Activates or deactivates the two-factor authentication feature for the current user.  For more information about the feature, see [User Guide > Administration > Two-factor authentication](https://cumulocity.com/guides/users-guide/administration/#tfa) in the *Cumulocity IoT documentation*.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_READ <b>OR</b> ROLE_SYSTEM </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -281,14 +321,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
             var currentUserTotpSecretActivity = new CurrentUserTotpSecretActivity(); // CurrentUserTotpSecretActivity | 
 
             try
@@ -296,10 +337,10 @@ namespace Example
                 // Activates or deactivates the two-factor authentication feature
                 apiInstance.PostCurrentUserTfaTotpResourceActivity(currentUserTotpSecretActivity);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceActivity: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceActivity: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -307,12 +348,28 @@ namespace Example
 }
 ```
 
+#### Using the PostCurrentUserTfaTotpResourceActivityWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Activates or deactivates the two-factor authentication feature
+    apiInstance.PostCurrentUserTfaTotpResourceActivityWithHttpInfo(currentUserTotpSecretActivity);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceActivityWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **currentUserTotpSecretActivity** | [**CurrentUserTotpSecretActivity**](CurrentUserTotpSecretActivity.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **currentUserTotpSecretActivity** | [**CurrentUserTotpSecretActivity**](CurrentUserTotpSecretActivity.md) |  |  |
 
 ### Return type
 
@@ -324,8 +381,8 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -336,14 +393,10 @@ void (empty response body)
 | **403** | Cannot deactivate TOTP setup. |  -  |
 | **404** | User not found. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## PostCurrentUserTfaTotpResourceVerify
-
+<a id="postcurrentusertfatotpresourceverify"></a>
+# **PostCurrentUserTfaTotpResourceVerify**
 > void PostCurrentUserTfaTotpResourceVerify (CurrentUserTotpCode currentUserTotpCode)
 
 Verify TFA code
@@ -351,7 +404,6 @@ Verify TFA code
 Verifies the authentication code that the current user received from a TFA app/service and uploaded to the platform to gain access or enable the two-factor authentication feature.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_READ <b>OR</b> ROLE_SYSTEM </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -365,14 +417,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
             var currentUserTotpCode = new CurrentUserTotpCode(); // CurrentUserTotpCode | 
 
             try
@@ -380,10 +433,10 @@ namespace Example
                 // Verify TFA code
                 apiInstance.PostCurrentUserTfaTotpResourceVerify(currentUserTotpCode);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceVerify: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceVerify: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -391,12 +444,28 @@ namespace Example
 }
 ```
 
+#### Using the PostCurrentUserTfaTotpResourceVerifyWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Verify TFA code
+    apiInstance.PostCurrentUserTfaTotpResourceVerifyWithHttpInfo(currentUserTotpCode);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.PostCurrentUserTfaTotpResourceVerifyWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **currentUserTotpCode** | [**CurrentUserTotpCode**](CurrentUserTotpCode.md)|  | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **currentUserTotpCode** | [**CurrentUserTotpCode**](CurrentUserTotpCode.md) |  |  |
 
 ### Return type
 
@@ -408,8 +477,8 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -421,22 +490,17 @@ void (empty response body)
 | **404** | Cannot validate TFA TOTP code - user&#39;s TFA TOTP secret does not exist. |  -  |
 | **422** | Unprocessable Entity – invalid payload. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## PutCurrentUserPasswordResource
-
-> void PutCurrentUserPasswordResource (PasswordChange passwordChange, string accept = null)
+<a id="putcurrentuserpasswordresource"></a>
+# **PutCurrentUserPasswordResource**
+> void PutCurrentUserPasswordResource (PasswordChange passwordChange, string? accept = null)
 
 Update the current user's password
 
 Update the current user's  password.  > **⚠️ Important:** If the tenant uses OAI-Secure authentication, the current user will not be logged out. Instead, a new cookie will be set with a new token, and the previous token will expire within a minute.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_ADMIN </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -450,26 +514,27 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
             var passwordChange = new PasswordChange(); // PasswordChange | 
-            var accept = application/json;  // string | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
+            var accept = application/json;  // string? | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
 
             try
             {
                 // Update the current user's password
                 apiInstance.PutCurrentUserPasswordResource(passwordChange, accept);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserPasswordResource: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserPasswordResource: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -477,13 +542,29 @@ namespace Example
 }
 ```
 
+#### Using the PutCurrentUserPasswordResourceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update the current user's password
+    apiInstance.PutCurrentUserPasswordResourceWithHttpInfo(passwordChange, accept);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserPasswordResourceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **passwordChange** | [**PasswordChange**](PasswordChange.md)|  | 
- **accept** | **string**| Advertises which content types, expressed as MIME types, the client is able to understand. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **passwordChange** | [**PasswordChange**](PasswordChange.md) |  |  |
+| **accept** | **string?** | Advertises which content types, expressed as MIME types, the client is able to understand. | [optional]  |
 
 ### Return type
 
@@ -495,8 +576,8 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -506,22 +587,17 @@ void (empty response body)
 | **401** | Authentication information is missing or invalid. |  -  |
 | **422** | Unprocessable Entity – invalid payload. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-
-## PutCurrentUserResource
-
-> CurrentUser PutCurrentUserResource (CurrentUser currentUser, string accept = null)
+<a id="putcurrentuserresource"></a>
+# **PutCurrentUserResource**
+> CurrentUser PutCurrentUserResource (CurrentUser currentUser, string? accept = null)
 
 Update the current user
 
 Update the current user.  <section><h5>Required roles</h5> ROLE_USER_MANAGEMENT_OWN_ADMIN </section> 
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -535,18 +611,19 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://<TENANT_DOMAIN>";
+            Configuration config = new Configuration();
+            config.BasePath = "https://<TENANT_DOMAIN>";
             // Configure HTTP basic authorization: Basic
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-            // Configure HTTP bearer authorization: OAI-Secure
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            // Configure Bearer token for authorization: OAI-Secure
+            config.AccessToken = "YOUR_BEARER_TOKEN";
             // Configure OAuth2 access token for authorization: SSO
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new CurrentUserApi(Configuration.Default);
+            var apiInstance = new CurrentUserApi(config);
             var currentUser = new CurrentUser(); // CurrentUser | 
-            var accept = application/json;  // string | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
+            var accept = application/json;  // string? | Advertises which content types, expressed as MIME types, the client is able to understand. (optional) 
 
             try
             {
@@ -554,10 +631,10 @@ namespace Example
                 CurrentUser result = apiInstance.PutCurrentUserResource(currentUser, accept);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserResource: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserResource: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -565,13 +642,32 @@ namespace Example
 }
 ```
 
+#### Using the PutCurrentUserResourceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update the current user
+    ApiResponse<CurrentUser> response = apiInstance.PutCurrentUserResourceWithHttpInfo(currentUser, accept);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurrentUserApi.PutCurrentUserResourceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **currentUser** | [**CurrentUser**](CurrentUser.md)|  | 
- **accept** | **string**| Advertises which content types, expressed as MIME types, the client is able to understand. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **currentUser** | [**CurrentUser**](CurrentUser.md) |  |  |
+| **accept** | **string?** | Advertises which content types, expressed as MIME types, the client is able to understand. | [optional]  |
 
 ### Return type
 
@@ -583,8 +679,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/vnd.com.nsn.cumulocity.currentuser+json
-- **Accept**: application/vnd.com.nsn.cumulocity.currentuser+json, application/vnd.com.nsn.cumulocity.error+json
+ - **Content-Type**: application/vnd.com.nsn.cumulocity.currentuser+json
+ - **Accept**: application/vnd.com.nsn.cumulocity.currentuser+json, application/vnd.com.nsn.cumulocity.error+json
 
 
 ### HTTP response details
@@ -594,8 +690,5 @@ Name | Type | Description  | Notes
 | **401** | Authentication information is missing or invalid. |  -  |
 | **422** | Unprocessable Entity – invalid payload. |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

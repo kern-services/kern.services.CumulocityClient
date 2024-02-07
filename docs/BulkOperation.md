@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.BulkOperation
 
 ## Properties
@@ -16,7 +15,5 @@ Name | Type | Description | Notes
 **GeneralStatus** | **string** | The general status of this bulk operation. The general status is visible for end users and they can filter and evaluate bulk operations by this status. | [optional] [readonly] 
 **Progress** | [**BulkOperationProgress**](BulkOperationProgress.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

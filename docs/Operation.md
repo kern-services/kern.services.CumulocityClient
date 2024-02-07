@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.Operation
 
 ## Properties
@@ -14,7 +13,5 @@ Name | Type | Description | Notes
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 **Status** | **string** | The status of the operation. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

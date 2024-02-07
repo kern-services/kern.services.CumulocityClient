@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.TenantUsageStatisticsCollection
 
 ## Properties
@@ -11,7 +10,5 @@ Name | Type | Description | Notes
 **Statistics** | [**PageStatistics**](PageStatistics.md) |  | [optional] 
 **UsageStatistics** | [**List&lt;DailyUsageStatistics&gt;**](DailyUsageStatistics.md) | An array containing the tenant usage statistics. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

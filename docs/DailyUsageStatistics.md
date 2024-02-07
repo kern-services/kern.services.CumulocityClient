@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.DailyUsageStatistics
+Daily usage statistics.
 
 ## Properties
 
@@ -24,7 +24,5 @@ Name | Type | Description | Notes
 **SubscribedApplications** | **List&lt;string&gt;** | Names of the tenant subscribed applications. Updated only three times a day starting at 8:57, 16:57 and 23:57. | [optional] 
 **TotalResourceCreateAndUpdateCount** | **int** | Sum of all inbound transfers. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

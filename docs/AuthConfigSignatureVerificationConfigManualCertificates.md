@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.AuthConfigSignatureVerificationConfigManualCertificates
+Details of the certificates.
 
 ## Properties
 
@@ -10,7 +10,5 @@ Name | Type | Description | Notes
 **ValidFrom** | **DateTime** | The validity start date of the certificate. | [optional] 
 **ValidTill** | **DateTime** | The expiry date of the certificate. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.RealtimeNotification
 
 ## Properties
@@ -17,9 +16,7 @@ Name | Type | Description | Notes
 **Subscription** | **string** | Name of the channel to subscribe to. Subscription channels are available for [Alarms](#tag/Alarm-notification-API), [Device control](#tag/Device-control-notification-API), [Events](#tag/Event-notification-API), [Inventory](#tag/Inventory-notification-API) and [Measurements](#tag/Measurement-notification-API). | [optional] 
 **Successful** | **bool** | Indicates if the operation was successful. | [optional] [readonly] 
 **SupportedConnectionTypes** | **List&lt;string&gt;** | Connection types supported by both client and server, that is, intersection between client and server options. | [optional] 
-**_Version** | **string** | [Bayeux protocol](https://docs.cometd.org/current/reference/#_concepts_bayeux_protocol) version used by the client (in a request) or server (in a response).  | [optional] 
+**VarVersion** | **string** | [Bayeux protocol](https://docs.cometd.org/current/reference/#_concepts_bayeux_protocol) version used by the client (in a request) or server (in a response).  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

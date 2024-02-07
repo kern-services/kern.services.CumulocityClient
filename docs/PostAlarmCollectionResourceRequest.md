@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.PostAlarmCollectionResourceRequest
 
 ## Properties
@@ -18,7 +17,5 @@ Name | Type | Description | Notes
 **Time** | **DateTime** | The date and time when the alarm is triggered. | 
 **Type** | **string** | Identifies the type of this alarm. | 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

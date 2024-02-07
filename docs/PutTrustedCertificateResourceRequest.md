@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.PutTrustedCertificateResourceRequest
 
 ## Properties
@@ -17,9 +16,7 @@ Name | Type | Description | Notes
 **SerialNumber** | **string** | The certificate&#39;s serial number. | [optional] [readonly] 
 **Status** | **string** | Indicates if the certificate is active and can be used by the device to establish a connection to the Cumulocity IoT platform. | [optional] 
 **Subject** | **string** | Name of the organization to which the certificate belongs. | [optional] [readonly] 
-**_Version** | **int** | Version of the X.509 certificate standard. | [optional] [readonly] 
+**VarVersion** | **int** | Version of the X.509 certificate standard. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

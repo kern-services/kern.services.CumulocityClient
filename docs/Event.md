@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.Event
 
 ## Properties
@@ -14,7 +13,5 @@ Name | Type | Description | Notes
 **Time** | **DateTime** | The date and time when the event is updated. | [optional] 
 **Type** | **string** | Identifies the type of this event. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

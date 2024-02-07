@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.MicroserviceApplicationManifestReadinessProbe
 
 ## Properties
@@ -12,7 +11,5 @@ Name | Type | Description | Notes
 **InitialDelaySeconds** | **int** | The probe&#39;s initial delay in seconds. | [optional] 
 **HttpGet** | [**ApplicationManifestProbeHttpGet**](ApplicationManifestProbeHttpGet.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

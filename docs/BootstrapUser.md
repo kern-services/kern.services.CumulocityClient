@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.BootstrapUser
 
 ## Properties
@@ -9,7 +8,5 @@ Name | Type | Description | Notes
 **Password** | **string** | The bootstrap user tenant password. | [optional] 
 **Tenant** | **string** | The bootstrap user tenant ID. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

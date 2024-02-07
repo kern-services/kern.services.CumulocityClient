@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.TenantApiResource
 
 ## Properties
@@ -16,7 +15,5 @@ Name | Type | Description | Notes
 **TenantSystemOptions** | **string** | Retrieves the tenant system options. | [optional] 
 **TenantSystemOptionsForCategoryAndKey** | **string** | Retrieves the tenant system options based on category and key. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

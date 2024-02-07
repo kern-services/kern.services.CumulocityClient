@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.RetentionRule
 
 ## Properties
@@ -14,7 +13,5 @@ Name | Type | Description | Notes
 **Source** | **string** | The source(s) to which the rule is applied. Used by all data types. | [optional] [default to "*"]
 **Type** | **string** | The type(s) to which the rule is applied. Used by the data types ALARM, AUDIT, EVENT and MEASUREMENT. | [optional] [default to "*"]
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

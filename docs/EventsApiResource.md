@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.EventsApiResource
 
 ## Properties
@@ -14,7 +13,5 @@ Name | Type | Description | Notes
 **EventsForSourceAndTime** | **string** | Read-only collection of all events for a specific source object in a particular time range. | [optional] 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

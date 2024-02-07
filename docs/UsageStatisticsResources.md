@@ -1,5 +1,5 @@
-
 # kern.services.CumulocityClient.Model.UsageStatisticsResources
+Resources usage for each subscribed microservice application.
 
 ## Properties
 
@@ -9,7 +9,5 @@ Name | Type | Description | Notes
 **Memory** | **int** | Total number of memory usage for tenant microservices, specified in MB. | [optional] 
 **UsedBy** | [**List&lt;UsageStatisticsResourcesUsedBy&gt;**](UsageStatisticsResourcesUsedBy.md) | Collection of resources usage for each microservice. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

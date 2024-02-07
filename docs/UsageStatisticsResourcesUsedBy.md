@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.UsageStatisticsResourcesUsedBy
 
 ## Properties
@@ -10,7 +9,5 @@ Name | Type | Description | Notes
 **Memory** | **int** | Number of memory usage for a single microservice. | [optional] 
 **Name** | **string** | Name of the microservice. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

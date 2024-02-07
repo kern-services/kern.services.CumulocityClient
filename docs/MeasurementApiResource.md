@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.MeasurementApiResource
 
 ## Properties
@@ -16,7 +15,5 @@ Name | Type | Description | Notes
 **MeasurementsForSourceAndValueFragmentTypeAndValueFragmentSeries** | **string** | Read-only collection of all measurements for a specific source object, particular fragment type and series, and an event type. | [optional] 
 **Self** | **string** | A URL linking to this resource. | [optional] [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

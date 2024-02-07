@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.ManagedObject
 
 ## Properties
@@ -22,7 +21,5 @@ Name | Type | Description | Notes
 **C8yDeviceTypes** | **List&lt;string&gt;** | This fragment must be added in order to publish sample commands for a subset of devices sharing the same device type. If the fragment is present, the list of sample commands for a device type will be extended with the sample commands for the &#x60;c8y_DeviceTypes&#x60;. New sample commands created from the user interface will be created in the context of the &#x60;c8y_DeviceTypes&#x60;. | [optional] 
 **C8ySupportedOperations** | **List&lt;string&gt;** | Lists the operations that are available for a particular device, so that applications can trigger the operations. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

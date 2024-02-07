@@ -1,4 +1,3 @@
-
 # kern.services.CumulocityClient.Model.ApplicationBinariesAttachmentsInner
 
 ## Properties
@@ -13,7 +12,5 @@ Name | Type | Description | Notes
 **Length** | **int** | The length of the attachment, in bytes. | [optional] 
 **Name** | **string** | The name of the attachment. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
