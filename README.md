@@ -1,4 +1,39 @@
-# kern.services.CumulocityClient - the C# library for the Cumulocity IoT
+# kern.services.CumulocityClient - C# library for the Cumulocity IoT
+
+This library was generated using the [OpenAPI generator](https://openapi-generator.tech) project.
+
+The command to generate this library can be found in the file `openapi/generate.sh`:
+
+```shell
+docker run --rm \
+    -v $PARENT_DIR:/local openapitools/openapi-generator-cli generate \
+    -i /local/openapi/c8y-oas-10.15.0.json \
+    -g csharp \
+    --additional-properties=netCoreProjectFile=true,packageName=kern.services.CumulocityClient,packageVersion=10.15.1,targetFramework=net8.0 \
+    -o /local/
+```
+
+
+# Cumulocity IoT REST API
+
+The source of the generated API can be found here:
+https://cumulocity.com/api/core/10.15.0/
+
+The version of the API is 10.15.0, which is not the latest version of the API, but it is the version currently deployed on the Instance
+that we are using. Feel free to create newer versions and provide a pull request.
+
+# NuGet package
+
+The NuGet package can be found here:
+https://www.nuget.org/packages/kern.services.CumulocityClient/
+
+The package is currently built manually and uploaded to NuGet.
+
+Build using dotnet:
+```shell
+dotnet pack -c Release
+```
+
 
 # REST implementation
 
