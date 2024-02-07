@@ -31,7 +31,7 @@ The package is currently built manually and uploaded to NuGet.
 
 Build using dotnet:
 ```shell
-dotnet pack -c Release
+dotnet pack ./src/kern.services.CumulocityClient/kern.services.CumulocityClient.csproj -o ./output -c Release
 ```
 
 
